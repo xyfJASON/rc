@@ -3,6 +3,12 @@ alias tmuxa="tmux a -t"
 alias tmuxn="tmux new -s"
 alias act="conda activate"
 alias deact="conda deactivate"
+alias gitlistblob="git rev-list --objects --all |
+                   git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+                   sed -n 's/^blob //p' |
+                   sort --numeric-sort --key=2 |
+                   cut -c 1-12,41- |
+                   $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest"
 
 alias setpipthu="pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple"
 alias unsetpip="pip config unset global.index-url"
