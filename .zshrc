@@ -13,7 +13,7 @@ alias deact="conda deactivate"
 alias setpipthu="pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple"
 alias unsetpip="pip config unset global.index-url"
 export PIPTHU="https://pypi.tuna.tsinghua.edu.cn/simple/"
-export PIPALI="http://mirrors.aliyun.com/pypi/simple/"
+export PIPALI="https://mirrors.aliyun.com/pypi/simple/"
 
 # git
 alias gitlistblob="git rev-list --objects --all |
