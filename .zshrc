@@ -25,6 +25,8 @@ alias gitlistblob="git rev-list --objects --all |
 
 # proxy
 alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias setproxy_socks="export https_proxy=socks5://127.0.0.1:7890 http_proxy=socks5://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias unsetproxy="unset http_proxy; unset https_proxy; unset all_proxy"
+
 alias setgithubproxy="git config --global http.https://github.com.proxy http://127.0.0.1:7890"
 alias unsetgithubproxy="git config --global --unset http.https://github.com.proxy"
