@@ -1,5 +1,11 @@
 # system
 alias nv="watch -n 0.1 nvidia-smi"
+function punzip {
+    unzip $1 | pv -l -s $(unzip -Z -1 $1 | wc -l) > /dev/null;
+}
+function pzip {
+    zip -r -q - $1 | pv -s $(du -sb $1 | awk '{print $1}') > $2;
+}
 
 # tmux
 alias tmuxa="tmux a -t"
