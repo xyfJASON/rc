@@ -7,6 +7,14 @@ function pzip {
     zip -r -q - $1 | pv -s $(du -sb $1 | awk '{print $1}') > $2;
 }
 
+# My alias
+alias ls="exa"
+alias l="exa -lah"
+alias ll="exa -lh"
+
+# X11
+export DISPLAY=:0
+
 # tmux
 alias tmuxa="tmux a -t"
 alias tmuxn="tmux new -s"
@@ -14,6 +22,7 @@ alias tmuxn="tmux new -s"
 # conda
 alias act="conda activate"
 alias deact="conda deactivate"
+export PATH="/Users/jason/anaconda3/envs/tools/bin:$PATH"
 
 # pip
 alias setpipthu="pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple"
