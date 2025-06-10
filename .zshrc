@@ -8,10 +8,12 @@ function pzip {
 }
 
 # My alias
-alias ls="exa"
-alias l="exa -lah"
-alias ll="exa -lh"
+alias ls="eza"
+alias l="eza -lah"
+alias ll="eza -lh"
 alias cat="bat -p -P"
+alias lt="ls -lah --tree"
+alias lt2="ls -lah --tree --level=2"
 
 # X11
 export DISPLAY=:0
