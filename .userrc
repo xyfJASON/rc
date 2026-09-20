@@ -7,7 +7,7 @@ function pzip {
     zip -r -q - $1 | pv -s $(du -sb $1 | awk '{print $1}') > $2;
 }
 
-# My alias
+# alias
 alias ls="eza"
 alias l="eza -lah"
 alias ll="eza -lh"
@@ -30,8 +30,6 @@ alias deact="conda deactivate"
 export PATH="/Users/jason/anaconda3/envs/tools/bin:$PATH"
 
 # pip
-alias setpipthu="pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple"
-alias unsetpip="pip config unset global.index-url"
 export PIPTHU="https://pypi.tuna.tsinghua.edu.cn/simple/"
 export PIPALI="https://mirrors.aliyun.com/pypi/simple/"
 
@@ -44,7 +42,11 @@ alias gitlistblob="git rev-list --objects --all |
                    $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest"
 
 # proxy
-alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias setproxy="export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897"
 alias unsetproxy="unset http_proxy; unset https_proxy; unset all_proxy"
 alias setgithubproxy="git config --global http.https://github.com.proxy http://127.0.0.1:7890"
 alias unsetgithubproxy="git config --global --unset http.https://github.com.proxy"
+
+# zsh
+bindkey '^[OA' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
