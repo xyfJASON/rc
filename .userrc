@@ -14,6 +14,8 @@ alias ll="eza -lh"
 alias cat="bat -p -P"
 alias lt="ls -lah --tree"
 alias lt2="ls -lah --tree --level=2"
+alias lt3="ls -lah --tree --level=3"
+alias delta="delta --side-by-side --line-numbers"
 
 # X11
 export DISPLAY=:0
