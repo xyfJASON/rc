@@ -1,11 +1,5 @@
 # system
 alias nv="watch -n 0.1 nvidia-smi"
-function punzip {
-    unzip $1 | pv -l -s $(unzip -Z -1 $1 | wc -l) > /dev/null;
-}
-function pzip {
-    zip -r -q - $1 | pv -s $(du -sb $1 | awk '{print $1}') > $2;
-}
 
 # alias
 alias ls="eza"
@@ -46,8 +40,6 @@ alias gitlistblob="git rev-list --objects --all |
 # proxy
 alias setproxy="export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897"
 alias unsetproxy="unset http_proxy; unset https_proxy; unset all_proxy"
-alias setgithubproxy="git config --global http.https://github.com.proxy http://127.0.0.1:7890"
-alias unsetgithubproxy="git config --global --unset http.https://github.com.proxy"
 
 # zsh
 bindkey '^[OA' history-substring-search-up
